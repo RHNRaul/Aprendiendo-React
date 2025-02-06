@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 
 export function HelloWorld(){
@@ -25,7 +26,7 @@ export function EjemploNombreProps(propiedades){
     </>);
 }
 
-export const Jugador = ({nombre,numero})=>{
+export const Jugador = ({nombre='Christiano ronaldo',numero=10})=>{
     return(<>
         <h1>
         Hola Jugador {nombre} con el numero de camiseta {numero}
@@ -33,6 +34,11 @@ export const Jugador = ({nombre,numero})=>{
         </>);
 }
 
-export const Usuario = (info)=>{
-    return(<><h1>Hola {info.usuario.nombre}</h1></>)
+export const MostrarUsuario = (usuario)=>{
+    return(<><h1>Hola {usuario.user?.nombre}</h1></>)
 }
+
+Jugador.propTypes = {
+    nombre: PropTypes.string, // `nombre` debe ser una cadena y es obligatorio
+    numero: PropTypes.string.isRequired  // `numero` debe ser un número y es obligatorio
+};

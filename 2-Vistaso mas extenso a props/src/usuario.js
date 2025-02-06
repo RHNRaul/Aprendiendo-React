@@ -1,0 +1,1 @@
+export const usuario = {nombre:'raul', apellido:'hernandez'}
