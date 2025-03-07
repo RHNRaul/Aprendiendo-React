@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+.fondo{
+  display:flex;
+  background-color:  transparent; /* Establece el fondo blanco para el div */
+  width: 100%;           /* Ocupa todo el ancho del body */
+  height: 100%;          /* Ocupa todo el alto del body */
+}
+.contenedor{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*Ocupar todo el ancho*/
+  background-color: rgba(51, 51, 51, 0.1);
+  width: 100%;           /* Ocupa todo el ancho del body */
+}
+.leyenda{
+  position: absolute;  /* Permite posicionarlo en relación al contenedor .full-container */
+  bottom: 10px;        /* A 10px del borde inferior */
+  right: 10px;         /* A 10px del borde derecho */
+  font-size: 14px;     /* Tamaño de fuente */
+  color: rgba(51, 51, 51, 0.8);
+}
+.tarjeta{
+  display: flex;              /* Activa Flexbox */
+  background-color: #ffff; /* Establece el fondo blanco para el div */
+  width:1000px;
+  height:600px;
+  max-height: 600px;
+  max-width: 1000px;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;           /* Oculta el contenido que sobresalga */
+}
+.imagenlogin{
+  flex: 1;                    /* Ocupa la mitad del espacio disponible */
+  animation: cambiarImagen 10s infinite; /* Cambia las imágenes cada 15 segundos, de forma infinita */
+  background-size: cover;      /* Ajusta la imagen para cubrir todo el div */
+  background-position: center; /* Centra la imagen */
+}
+.preformulario{
+  flex: 1;                    /* Ocupa la otra mitad del espacio */
+  background-color: #fff;     /* Fondo blanco para el formulario */
+  display: flex;              /* Permite alinear su contenido */
+  flex-direction: column;     /* Organiza los elementos en columna */
+  align-items: center;        /* Centra el contenido horizontalmente */
+  padding: 20px;              /* Añade espacio interno */
+}
+
+.contenedorIcono{
+  display:flex;
+  flex-direction: column;      /* Cambia la dirección a columna (vertical) */
+  align-items: center;        /* Centra el contenido horizontalmente */
+  margin-bottom: 20px;         /* Espacio inferior */
+  overflow: hidden;           /* Oculta el contenido que sobresalga */
+}
+.leyendalogin{
+  font-size: 36px;             /* Aumenta el tamaño de la fuente */
+  font-family: 'Roboto', sans-serif; /* Usa la fuente Roboto */
+  font-weight: bold;           /* Aplica negritas al texto */
+}
+.iconologin{
+  width: 100px;                 /* Ancho de la imagen */
+  height: 100px;                /* Alto de la imagen */
+  margin-right: 10px;          /* Espacio entre la imagen y el texto */
+  background-image: url('../resource/imgLogin/login.png'); /* Especifica la imagen de fondo */
+  background-size: cover;      /* Asegura que la imagen cubra completamente el div */
+  background-position: center; /* Centra la imagen dentro del div */
+}
+.formulariologin{
+  display:flex;
+  flex-direction: column;      /* Cambia la dirección a columna (vertical) */
+  align-items: left;        /* Centra el contenido horizontalmente */
+  font-family: 'Roboto', sans-serif; /* Usa la fuente Roboto */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+.formulariologin label
+{
+  font-size: 24px;             /* Aumenta el tamaño de la fuente */
+  font-weight: bold;           /* Aplica negritas al texto */
+}
+
+.formulariologin input
+{
+  background-color: transparent; /* Hace el fondo del input transparente */
+  border: none; /* Elimina el borde */
+  outline: none; /* Elimina el contorno por defecto al hacer foco */
+  border-bottom: 2px solid #ccc; /* Añade una barra abajo */
+  transition: border-bottom-color 0.5s ease; /* Transición para el color de la barra */
+}
+
+.formulariologin input:focus
+{
+  border-bottom-color: #007bff;
+}
+.formulariologin input:hover
+{
+  border-bottom-color: #007bff;
+}
+
+
+.formulariologindiv
+{
+  display: flex;           /* Usamos flexbox para alinear los botones horizontalmente */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  align-items: center;        /* Centra el contenido horizontalmente */
+  justify-content: center;
+  gap: 20px;
+}
+.formulariologindiv label
+{
+  color:blue;
+  cursor: pointer; /* Cambia el cursor al pasar por encima para simular un enlace */
+}
+
+.formulariologindiv label:hover
+{
+  color: red;
+}
+
+.formularioDivBotones{
+  display: flex;           /* Usamos flexbox para alinear los botones horizontalmente */
+  gap: 20px;               /* Espacio entre los botones */
+  flex-direction: column;      /* Cambia la dirección a columna (vertical) */
+  margin-top: 20px;        /* Espacio superior */
+  overflow:hidden;
+}
+.formularioBotonAceptar 
+{
+  width: 400px;                 /* Ancho de la imagen */
+  height: 80px;                /* Alto de la imagen */
+  background-color: rgb(47, 196, 255);
+  border-radius: 40px;
+  border: none; /* Elimina el borde */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  font-size: 24px;             /* Aumenta el tamaño de la fuente */
+  font-weight: bold;           /* Aplica negritas al texto */
+  margin-top: 15px; /* Espacio superior para separarlos del contenido anterior */
+}
+
+.formularioBotonAceptar:hover 
+{
+  background-color: rgb(47, 102, 255);
+  transform: translateY(-3px); /* Efecto de levantar el botón */
+}
+
+.formularioBotonAceptar:active 
+{
+  transform: translateY(2px); /* El botón se hunde al hacer clic */
+  background-color: rgb(47, 102, 255);
+}
+.formularioBotonDefault{
+  width: 400px;                 /* Ancho de la imagen */
+  height: 80px;                /* Alto de la imagen */
+  background-color: white;
+  border-radius: 40px;
+  border: none; /* Elimina el borde */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  font-size: 24px;             /* Aumenta el tamaño de la fuente */
+  font-weight: bold;           /* Aplica negritas al texto */
+  margin-top: 15px; /* Espacio superior para separarlos del contenido anterior */
+}
+.formularioBotonDefault:hover
+{
+  transform: translateY(-3px); /* Efecto de levantar el botón */
+}
+.formularioBotonDefault:active
+{
+  transform: translateY(2px); /* El botón se hunde al hacer clic */
+}
+
+.passwordstrengthbar {
+  background-color: #e0e0e0; /* Color de fondo de la barra */
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  font-family: 'Roboto', sans-serif; /* Usa la fuente Roboto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px; /* Ajusta la altura según sea necesario */
+  width: 100px; /* Ajusta el ancho según sea necesario */
+  margin-left: 10px; /* Espacio entre el label y la barra */
+  color: white; /* Color del texto */
+  font-size: 12px; /* Tamaño del texto */
+}
+
+
+.botonVisualizar {
+  background-color: transparent; /* Hace el fondo del botón transparente */
+  border: none; /* Elimina el borde */
+  outline: none; /* Elimina el contorno por defecto al hacer foco */
+  cursor: pointer; /* Cambia el cursor al pasar por encima para simular un enlace */
+  position: absolute; /* Posiciona el botón dentro del input */
+  right: 0; /* Ajusta la posición del botón */
+  top: 0; /* Ajusta la posición del botón */
+  height: 100%; /* Hace que el botón ocupe toda la altura del input */
+  width: 40px; /* Ajusta el ancho del botón */
+  display: flex; /* Para centrar el icono */
+  align-items: center; /* Para centrar el icono */
+  justify-content: center; /* Para centrar el icono */
+}
+
+.iconoBotonVisualizarOpen{
+  background-image: url('../resource/imgLogin/eye_open.svg'); /* Ruta a la imagen del icono de ojo abierto */
+  background-size: contain; /* Ajusta el tamaño de la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.iconoBotonVisualizarClose{
+  background-image: url('../resource/imgLogin/eye_closed.svg'); /* Ruta a la imagen del icono de ojo abierto */
+  background-size: contain; /* Ajusta el tamaño de la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+
+.inputContainerPassword {
+  position: relative; /* Necesario para posicionar el botón dentro del input */
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.inputContainerPassword input {
+  flex: 1; /* Permite que el input ocupe el espacio disponible */
+  padding-right: 40px; /* Espacio para el botón de visualización */
+}
+
+.BAJA {
+  width: 33%;
+  background-color: #ff0000;
+}
+
+.MEDIA {
+  width: 33%;
+  background-color: #ff8000;
+}
+
+.BUENA {
+  width: 33%;
+  background-color: #00ff00;
+}
+
+
+@keyframes cambiarImagen {
+  0% {
+    background-image: url('../resource/imgLogin/anichan2.png'); /* Primera imagen */
+  }
+  33% {
+    background-image: url('../resource/imgLogin/anichan3.png'); /* Segunda imagen */
+  }
+  66% {
+    background-image: url('../resource/imgLogin/anichan4.png'); /* Tercera imagen */
+  }
+  100% {
+    background-image: url('../resource/imgLogin/anichan2.png'); /* Vuelve a la primera imagen */
+  }
+}
